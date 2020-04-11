@@ -1,0 +1,81 @@
+<html>
+  <title>Galaxy Gen</title>
+  <head>
+    <script src="entry.js"></script>
+    <script src="renderer.js"></script>
+    <script src="systemgen.js"></script>
+  </head>
+  <body onload="regen()">
+    <button onClick="regen()">Generate</button>
+    <div
+      class="slidecontainer"
+      style="display: flex; flex-direction: column; width: 300px;"
+    >
+      <label for="n_value">Turns (1/4...8)</label>
+      <input
+        name="n_value"
+        type="range"
+        min="1"
+        max="8"
+        value="2"
+        step="0.1"
+        oninput="regen()"
+        id="value_n"
+      />
+      <label for="b_value">Circular...Enlongated</label>
+      <input
+        name="b_value"
+        type="range"
+        min="0.1"
+        max="0.8"
+        step="0.01"
+        value="1"
+        oninput="regen()"
+        id="value_b"
+      />
+      <label for="s_value">Stars (1k...100k)</label>
+      <input
+        name="s_value"
+        type="range"
+        min="1000"
+        max="100000"
+        step="1000"
+        value="10000"
+        oninput="regen()"
+        id="value_s"
+      />
+      <label for="a_value">Mass Distribution (Core...Arms)</label>
+      <input
+        name="a_value"
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.8"
+        oninput="regen()"
+        id="value_a"
+      />
+      <label for="c_value">Spin (anti/clock)</label>
+      <input
+        name="c_value"
+        type="range"
+        min="0"
+        max="1"
+        step="1"
+        value="0"
+        oninput="regen()"
+        id="value_c"
+      />
+    </div>
+
+    <div>
+      <canvas
+        style="background-color: black"
+        id="canvas"
+        width="1000px"
+        height="1000px"
+        style="border:1px solid #000000;"
+      />
+    </div>
+  </body>
+</html>
