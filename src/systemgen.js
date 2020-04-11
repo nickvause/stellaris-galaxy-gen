@@ -9,7 +9,6 @@ function generate(n, b, s, a, c) {
   const coreProp = 1 - a;
   const clockSpin = c > 0;
 
-  console.log(clockSpin);
   let stars = [];
   for (let i = 0; i < s; i++) {
     stars.push(randomStar(winding_n, barRatio_b, clockSpin, coreProp));
